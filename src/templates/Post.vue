@@ -13,12 +13,14 @@
 import Default from '@/layouts/Default.vue'
 
 export default {
+  metaInfo () {
+    return {
+      title: this.$page.posts.edges[0].node.title,
+    }
+  },
   components: {
     Default
   }
-}
-</script>
-
 }
 </script>
 
@@ -40,7 +42,7 @@ export default {
 
     h1 {
       font-size: 4rem;
-      margin-bottom: 2em;
+      margin-bottom: 1em;
       line-height: 2;
       text-align: center;
     }

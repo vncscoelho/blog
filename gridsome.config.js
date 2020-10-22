@@ -1,5 +1,5 @@
 module.exports = {
-  name: "Vinicius Coelho - Desenvolvedor front-end e web designer",
+  siteName: "Vinicius Coelho - Desenvolvedor front-end e web designer",
   plugins: [
     {
       use: '@gridsome/source-filesystem',

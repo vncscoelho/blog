@@ -1,9 +1,16 @@
 <template>
   <main class="wrapper">
-    <a href="/" class="logo font-primary">
-      Vinicius
-      <br />Coelho
-    </a>
+    <header class="main-header">
+      <a href="/" class="main-header__logo font-primary">
+        Vinicius
+        <br />Coelho
+      </a>
+      <nav>
+        <a href="https://www.linkedin.com/in/vinicius-coelho-6247bb30/">Linkedin</a>
+        <a href="https://github.com/vncscoelho">Github</a>
+        <a href="mailto:contato@viniciuscoelho.com">E-mail</a>
+      </nav>
+    </header>
     <slot />
   </main>
 </template>
@@ -19,10 +26,32 @@ query {
 <style lang="scss">
 $primary: orangered;
 
-.logo {
+.main-header {
   position: fixed;
-  font-size: 1.5em;
-  color: #c7bcac;
+  height: calc(100vh - 10em);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  a {
+    color: #c7bcac;
+  }
+
+  &__logo {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    display: inline-block;
+  }
+
+  nav {
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+
+    a + a {
+      margin-top: 0.5em;
+    }
+  }
 }
 
 .wrapper {
